@@ -19,7 +19,7 @@ export class TodoCardComponent implements OnInit, OnDestroy {
   inputTask = 'Nueva tarea';
 
   constructor() {
-  }
+     }
 
   ngOnInit(): void {
     this.tasks.push({ title: 'Comprar gomitas', done: false});
@@ -28,7 +28,7 @@ export class TodoCardComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-
+   
   }
 
   addTask() {
@@ -37,6 +37,19 @@ export class TodoCardComponent implements OnInit, OnDestroy {
 
   deleteTask(task: Task) {
     // TODO(HACER EL ELIMINAR)
-    console.log(`Eliiminando ${task}`)
+    var i = this.tasks.indexOf(task);
+    
+    this.tasks.splice(i, 1);    
+    
+    console.log(`Eliminando ${task}`)
   }
+
+  setTitle(){
+        
+        
+   
+  }
+  
+  
+
 }
